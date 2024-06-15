@@ -290,12 +290,15 @@ h1,h2,h3,h4,h5,h6,p{
     }
 }
 
+
+
 .advantages {
    background-color: #F4F4FD;
    padding: 120px 0;
 }
 .container{
-    width: 1158px;
+    /* width: 1158px; */
+    max-width: 320px;
     margin: 0 auto;
     
 }
@@ -314,15 +317,26 @@ h1,h2,h3,h4,h5,h6,p{
 
 .advantages-list{
     display: flex;
-    gap: 24px;
+    justify-content: flex-start;
+    flex-direction: column;
+    /* gap: 24px; */
+    gap: 72px;
 
 }
 .advantages-item{
-    width: calc((100% - 72px) / 4);
+    /* width: calc((100% - 72px) / 4); */
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 288px;
     
 }
 .icon-block{
-    display: flex;
+    /* display: flex; */
+    display: none;
+    justify-content: center;
     align-items: center;
     padding: 24px 100px;
     border: 1px solid #8e8f99;
@@ -334,22 +348,65 @@ h1,h2,h3,h4,h5,h6,p{
 }
 .advantages-title-name {
     font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.2;
+    /* font-weight: 500; */
+    font-weight: 700;
+    /* font-size: 20px; */
+    font-size: 36px;
+    /* line-height: 1.2; */
+    line-height: 1.11;
     letter-spacing: 0.02em;
     color: #2e2f42;
     margin-bottom: 8px;
+    display: block;
+    align-self: center;
 }
 
 .advantages-title-text {
     font-family: "Roboto", sans-serif;
-    font-weight: 400;
+    /* font-weight: 400; */
+    font-weight: 500;
     font-size: 16px;
     line-height: 1.50;
     letter-spacing: 0.02em;
     color: #434455;
 }
+
+@media screen and (min-width: 768px) {
+    .container
+
+    .advantages-list{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 72px 24px;
+        justify-content: space-between;
+
+    }
+    .advantages-item{
+        width: calc((100%-24px) / 2);
+    }
+}
+@media screen and (min-width: 1158px) {
+    .advantages-list{
+        display: flex;
+        gap: 24px;
+    }
+    .advantages-item{
+        width: calc((100% - 72px) / 4);
+    }
+    .advantages-title-name{
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.2;
+    }
+    .advantages-title-text{
+        font-weight: 400;
+    }
+    .icon-block{
+        display: flex;
+    }
+}
+
 .net-list{
     display: flex;
     align-items: center;
