@@ -16,11 +16,24 @@ h1,h2,h3,h4,h5,h6,p{
     margin: 0;
 }
 .container{
-    width: 1158px;
-    padding: 0 15px;
+    max-width: 320px;
+    padding: 0 16px;
     margin: 0 auto;
-
 }
+
+@media screen and (min-width: 768px) {
+    .container{
+        max-width: 768px;
+    }
+}
+
+@media screen and (min-width: 1158px) {
+    .container{
+        max-width: 1158px;
+        padding: 0 15px;
+    }
+}
+
 .header{
     border-bottom: 1px solid #e7e9fc;
     box-shadow: 0px 2px 1px rgba(46,47,66,0.08),
@@ -30,6 +43,7 @@ h1,h2,h3,h4,h5,h6,p{
 .header-container{
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 .navigation{
     display: flex;
@@ -45,66 +59,113 @@ h1,h2,h3,h4,h5,h6,p{
     text-transform: uppercase;
     color: #4d5ae5;
     color: #404bbf;
-    margin-right: 76px;
+    padding: 17px 0;
 }
 
 .logo-part{
     color: #2e2f42;
 }
 .nav-list{
-    display: flex;
-    gap: 40px;
+    display: none;
 }
-.nav-link{
-    color: #2e2f42;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    padding: 24px 0;
-    display: block;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.current{
-position: relative;
-color: #404BBF;
-}
-.current::after{
-content: "";
-position: absolute;
-left: 0;
-bottom: -1px;
-background-color: #404bbf;
-border-radius: 2px;
-height: 4px;
-width: 100%;
-}
-.nav-link:hover,
-.nav-link:focus{
-    color: #404bbf;
-}
+
 .address
 {   font-style:normal;
     margin-left: auto;
+    display: none;
 }
 .address-list{
     display: flex;
     gap: 40px;
 }
-.address-link{
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: #434455;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    
-}
-.address-link:hover,
-.address-link:focus{color: #404bbf;}
 
+.open-menu-btn {
+    padding: 0;
+    line-height: 0;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+}
+@media screen and (min-width:768px) {
+    .open-menu-btn {
+        display: none;
+    }
+    .logo{
+        margin-right: 120px;
+    }
+    .nav-list {
+        display: flex;
+        gap: 40px;
+         }
+    .nav-link {
+        color: #2e2f42;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        padding: 24px 0;
+        display: block;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    .nav-link:hover,
+    .nav-link:focus {
+        color: #404bbf;
+        }
+    .current {
+        position: relative;
+        color: #404BBF;
+        }
+    
+    .current::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        background-color: #404bbf;
+        border-radius: 2px;
+        height: 4px;
+        width: 100%;
+        }
+    .address {
+        display: block;
+                  }
+    .address-list{
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    .address-link {
+        font-size: 12px;
+        line-height: 1.16;
+        letter-spacing: 0.02em;
+        color: #434455;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+        }
+    
+    .address-link:hover,
+    .address-link:focus {
+        color: #404bbf;
+        }
+}
+@media screen  and (min-width: 1158px) {
+    .logo{
+        margin-right: 76px;
+    }
+    .address-list{
+        flex-direction: row;
+        gap: 40px;
+    }
+    .address-link{
+        font-size: 16px;
+        line-height: 1.5;
+    }
+}
 .effective{
-    padding-top: 120px;
-    padding-bottom: 120px;
+    /* padding-top: 120px;
+    padding-bottom: 120px; */
+    padding-top: 72px;
+
 }
 
 .effective-one{
@@ -113,32 +174,44 @@ width: 100%;
     background-image: linear-gradient(
         rgba(46,47,66,0.7),
         rgba(46,47,66,0.7)),
-        url(../images/people-office111.jpg);
+        url(../images/Dark-bg1.jpg);
     background-repeat:no-repeat;
     background-position: center;
     background-size: cover;
-    max-width: 1440px;  
+    max-width: 320px;
+    /* max-width: 1440px;  
     margin: 0 auto;
-    height: 600px;
+    height: 600px; */
+}
+@media (min-resolution: 192dpi) {
+   .effective effective-one {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)),
+            url(../images/Dark-bg2.jpg);
+   } 
 }
 .container{
-   width: 1158px;
-   padding: 0 15px;
-   margin: 0 auto;
+   max-width: 320px;
+   padding: 0 16px;
+   /* margin: 0 auto; */
 
    }
 
 .title {
     font-family: "Roboto", sans-serif;
     font-weight: 700;
-    font-size: 56px;
+    /* font-size: 56px; */
     line-height: 1.07;
     letter-spacing: 0.02em;
     text-align: center;
     color: #fff;
     cursor: pointer;
-    max-width: 496px;
-    margin: 0 auto 48px auto;
+    /* max-width: 496px;
+    margin: 0 auto 48px auto; */
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 72px;
+    max-width: 216px;
     }
 
 
@@ -169,6 +242,54 @@ width: 100%;
    color: #404bbf;
    background-color: #404BBF;
 }
+
+@media screen and (min-width: 768px) {
+    .effective effective-one {
+        margin: 0 auto;
+        padding: 112px 0;
+        max-width: 768px;
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                    rgba(46, 47, 66, 0.7)),
+                url(../images/Dark-bg1.jpg);
+    .container {
+        max-width: 768px;
+         }
+    .title {
+         font-size: 56px;
+         max-width: 496px;
+         margin-bottom: 36px;
+         }
+    }
+}
+
+@media screen and (min-width: 768px) and (min-resolution: 192dpi) {
+    .effective effective-one {
+        background-image: url(../images/Dark-bg2.jpg);
+    }
+}
+
+@media screen and (min-width: 1158px) {
+.effective effective-one{
+    margin: 0 auto;
+    padding: 188px 0;
+    max-width: 1140px;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)),
+            url(../images/people-office111.jpg);
+}
+.title {
+    font-size: 56px;
+    max-width: 496px;
+    margin-bottom: 48px;
+}
+}
+
+@media screen and (min-width: 1158px) and (min-resolution: 192dpi) {
+    .effective effective-one {
+        background-image: url(../images/people-office111.jpg);
+    }
+}
+
 .advantages {
    background-color: #F4F4FD;
    padding: 120px 0;
