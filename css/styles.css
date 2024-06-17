@@ -1,9 +1,12 @@
 body{
     font-family: "Roboto",sans-serif;
     color: #434455;
-    background-color: #fff;
-    
+    background-color: #fff; 
 }
+
+/* html,body {
+    overflow: hidden;
+} */
 a{
     text-decoration: none;
 }
@@ -457,7 +460,10 @@ h1,h2,h3,h4,h5,h6,p{
         background-image: linear-gradient(rgba(46, 47, 66, 0.7),
                     rgba(46, 47, 66, 0.7)),
                 url(../images/Dark-bg1.jpg);
-   
+    .title {
+            font-size: 56px;
+            max-width: 496px;
+        }
 
     }
 }
@@ -469,10 +475,10 @@ h1,h2,h3,h4,h5,h6,p{
     background-image: linear-gradient(rgba(46, 47, 66, 0.7),
                 rgba(46, 47, 66, 0.7)),
             url(../images/Dark-bg2.jpg);
-       .title {
+       /* .title {
         font-size: 56px;
         max-width: 496px;
-       }
+       } */
     }
 }
 
@@ -557,7 +563,7 @@ h1,h2,h3,h4,h5,h6,p{
     max-width: 288px; */
     
 } */
-.icon-block{
+.icon-block {
     /* display: flex; */
     display: none;
     /* justify-content: center;
@@ -647,18 +653,17 @@ h1,h2,h3,h4,h5,h6,p{
         border: 1px solid #8e8f99;
         margin-bottom: 8px;
         width: 264px;
-
     }
 }
 
-/* .net-list{
+/* -------item---------- */
+
+.net-list{
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 24px;
-} */
-
-/* -------item---------- */
+}
 
 .item{
     height: 40px;
@@ -690,7 +695,9 @@ h1,h2,h3,h4,h5,h6,p{
     text-transform: capitalize;
     background: #f4f4fd;
     color: #2e2f42;
-    padding:120px 0;
+    /* padding:120px 0; */
+    padding-top: 96px;
+    padding-bottom: 96px;
 }
 
 .team-title {
@@ -707,7 +714,7 @@ h1,h2,h3,h4,h5,h6,p{
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 24px;
+    /* gap: 24px; */
     list-style: none;
 }
 
@@ -750,6 +757,45 @@ h1,h2,h3,h4,h5,h6,p{
     text-align: center;
     color: #434455;
 }
+
+@media screen and (min-width: 768px) {
+    .container {
+            width: 768;
+        }
+    .team-list{
+        gap: 64px 24px;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .team-our{
+        width: calc((100% - 24px) / 2);
+    }
+    .team-box{
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+@media screen and (min-width: 1158px) {
+.container {
+        width: 1158px;
+    }
+.team {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    }
+.team-list{
+    gap: 24px;
+    flex-wrap: nowrap;
+}
+.team-our{
+    width: calc((100% - 3 * 24px) / 4);
+}
+
+}
+
+
+/* ----------portfolio--------- */
+
 .portfolio {
     font-style: normal;
     text-align: center;
