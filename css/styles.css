@@ -913,8 +913,11 @@ h1,h2,h3,h4,h5,h6,p{
 }
 
 .container-footer{
-    display: flex;
-    align-items: baseline;
+    /* display: flex;
+    align-items: baseline; */
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
 }
 .footer-logo{
     /* margin-right: 120px; */
@@ -929,9 +932,12 @@ h1,h2,h3,h4,h5,h6,p{
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #4d5ae5;
-    display: inline-block;
+    /* display: inline-block; */
+    display: flex;
     margin-bottom: 16px;
-    text-align: left
+    justify-content: center;
+    align-items: center;
+    /* text-align: left */
 }
 
 .logo-studio-footer {
@@ -942,7 +948,7 @@ h1,h2,h3,h4,h5,h6,p{
 
 .business-title-text{
     font-family: "Roboto", sans-serif;
-    font-weight: 400;
+    /* font-weight: 400; */
     font-size: 16px;
     line-height: 1.50;
     letter-spacing: 0.02em;
@@ -951,8 +957,10 @@ h1,h2,h3,h4,h5,h6,p{
     text-align: left
 }
 .footer-box{
-    align-items: baseline;
-    margin-right: 80px;
+    margin-bottom: 72px;
+    text-align: center;
+    /* align-items: baseline;
+    margin-right: 80px; */
 }
 .footer-box-text {
     font-weight: 500;
@@ -961,11 +969,13 @@ h1,h2,h3,h4,h5,h6,p{
     letter-spacing: 0.02em;
     color: #FFFFFF;
     margin-bottom: 16px;
+    text-align: center;
 }
 
 .footer-box-list {
     display: flex;
     gap: 16px;
+    justify-content: center;
 }
 
 .footer-box-item {
@@ -998,8 +1008,14 @@ h1,h2,h3,h4,h5,h6,p{
 
 }
 
+/* ------------------- */
+
 .footer-submit-form {
-    justify-content: flex-end;
+    display: flex;
+    gap: 24px;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: flex-end; */
 }
 .footer-form-title{
     margin-bottom: 16px;
@@ -1007,6 +1023,7 @@ h1,h2,h3,h4,h5,h6,p{
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #ffffff;
+    text-align: center;
 }
 .footer-form{
     display: flex;
@@ -1055,6 +1072,97 @@ h1,h2,h3,h4,h5,h6,p{
 .footer-btn-icon {
     margin-left: 16px;
 }
+
+@media screen and (min-width: 768px) {
+    .container {
+        width: 768px;
+    }
+    .container-footer{
+        width: 552px;
+        align-items: baseline;
+        display: flex;
+        gap: 72px 24px;
+        flex-wrap: wrap;
+    }
+    .footer{
+        padding-top: 96px;
+        padding-bottom: 96px;
+    }
+    .footer-logo{
+        margin-bottom: 0;
+    }
+    .logo{
+        display: inline-block;
+    }
+    .business-title-text{
+        margin-bottom: 0;
+    }
+    .footer-box{
+        margin-bottom: 0;
+    }
+    .footer-box-text{
+        text-align: left;
+    }
+    .footer-box-list{
+        justify-content: left;
+    }
+    .footer-form-title{
+        text-align: left;
+    }
+    .footer-form{
+        flex-direction: row;
+    }
+}
+
+@media screen and (min-width: 1158px) {
+    .footer{
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+   .container{
+    width: 1158px;
+   }
+   .container-footer{
+    display: flex;
+    flex-direction: row;
+    gap: unset;
+   }
+   .footer-logo{
+    margin-right: 120px;
+   }
+   .container-footer{
+    display: flex;
+    align-items: baseline;
+   }
+   .footer-box{
+    margin-right: 80px;
+   }
+   .footer-box-text{
+    justify-content: left;
+   }
+   .footer-form{
+    width: 453px;
+    height: 80px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    display: flex;
+        gap: 24px;
+   }
+   .footer-form-title{
+    text-align: left;
+    margin-bottom: 0;
+   }
+   .logo{
+    display: inline-block;
+   }
+   .business-title-text{
+    text-align: initial;
+   }
+}
+
+
+
+/* --------backdrop--------- */
 
 .backdrop {
 position: fixed;
