@@ -178,6 +178,7 @@ h1,h2,h3,h4,h5,h6,p{
     /* ----------початок-------- */
     opacity: 0;
     pointer-events: none;
+    z-index: 999;
 }
 
 .backdrop-menu.is-open {
@@ -384,7 +385,7 @@ h1,h2,h3,h4,h5,h6,p{
     background-image: linear-gradient(
         rgba(46,47,66,0.7),
         rgba(46,47,66,0.7)),
-        url(../images/people-office111.jpg);
+        url(../images/Dark-bg1.jpg);
     background-repeat:no-repeat;
     background-position: center;
     background-size: cover;
@@ -418,7 +419,7 @@ h1,h2,h3,h4,h5,h6,p{
     margin: 0 auto 48px auto; */
     margin-left: auto;
     margin-right: auto;
-    /* margin-bottom: 72px; */
+    margin-bottom: 72px;
     max-width: 216px;
     margin: 0 auto;
     }
@@ -459,7 +460,7 @@ h1,h2,h3,h4,h5,h6,p{
         max-width: 768px;
         background-image: linear-gradient(rgba(46, 47, 66, 0.7),
                     rgba(46, 47, 66, 0.7)),
-                url(../images/Dark-bg1.jpg);
+                url(../images/office-tablet@1x.jpg);
     .title {
             font-size: 56px;
             max-width: 496px;
@@ -474,7 +475,7 @@ h1,h2,h3,h4,h5,h6,p{
     .effective {
     background-image: linear-gradient(rgba(46, 47, 66, 0.7),
                 rgba(46, 47, 66, 0.7)),
-            url(../images/Dark-bg2.jpg);
+            url(../images/office-tablet@2x.jpg);
        /* .title {
         font-size: 56px;
         max-width: 496px;
@@ -491,7 +492,7 @@ h1,h2,h3,h4,h5,h6,p{
     max-width: 1140px;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7),
                 rgba(46, 47, 66, 0.7)),
-            url(../images/people-office111.jpg);
+            url(../images/people-desk@1x.jpg);
             /* height: 600px; */
 }
 
@@ -501,7 +502,7 @@ h1,h2,h3,h4,h5,h6,p{
 (min-rezolution: 2dppx),
 (min-rezolution: 192dpi) {
     .effective {
-        background-image: url(../images/people-office111.jpg);
+        background-image: url(../images/people-desk@2x.jpg);
     }
         .title {
             font-size: 56px;
@@ -512,7 +513,7 @@ h1,h2,h3,h4,h5,h6,p{
 /* ------advantages------ */
 
 .advantages {
-   background-color: #F4F4FD;
+   /* background-color: #F4F4FD; */
    /* padding: 120px 0; */
    padding-top: 96px;
    padding-bottom: 96px;
@@ -570,6 +571,7 @@ h1,h2,h3,h4,h5,h6,p{
     margin-bottom: 8px;
     display: block;
     align-self: center;
+    text-align: left;
 }
 
 .advantages-title-text {
@@ -599,7 +601,7 @@ h1,h2,h3,h4,h5,h6,p{
 
     }
     .advantages-item{
-        width: calc((100%-24px) / 2);
+        width: calc((100% - 24px) / 2);
     }
     .advantages-title-name{
         text-align: left;
@@ -782,7 +784,7 @@ h1,h2,h3,h4,h5,h6,p{
 
 .portfolio {
     font-style: normal;
-    text-align: center;
+    /* text-align: center; */
     text-transform: capitalize;
     /* padding-top: 120px;
     padding-bottom: 120px; */
@@ -823,6 +825,8 @@ h1,h2,h3,h4,h5,h6,p{
 }
 .img{
     display: block;
+    max-width: 100%;
+    
 }
 .portf-img{
    
@@ -934,7 +938,7 @@ h1,h2,h3,h4,h5,h6,p{
     color: #4d5ae5;
     /* display: inline-block; */
     display: flex;
-    margin-bottom: 16px;
+    /* margin-bottom: 16px; */
     justify-content: center;
     align-items: center;
     /* text-align: left */
@@ -1018,7 +1022,7 @@ h1,h2,h3,h4,h5,h6,p{
     /* justify-content: flex-end; */
 }
 .footer-form-title{
-    margin-bottom: 16px;
+    /* margin-bottom: 16px; */
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -1028,6 +1032,7 @@ h1,h2,h3,h4,h5,h6,p{
 .footer-form{
     display: flex;
     gap: 24px;
+    flex-direction: column;
 
 }
 .footer-input {
@@ -1067,6 +1072,8 @@ h1,h2,h3,h4,h5,h6,p{
     background: #4d5ae5;
     border: none;
     cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .footer-btn-icon {
@@ -1078,15 +1085,17 @@ h1,h2,h3,h4,h5,h6,p{
         width: 768px;
     }
     .container-footer{
-        width: 552px;
-        align-items: baseline;
+        width: 584px;
+        /* align-items: baseline; */
         display: flex;
         gap: 72px 24px;
         flex-wrap: wrap;
+        flex-direction: row;
     }
     .footer{
-        padding-top: 96px;
-        padding-bottom: 96px;
+        /* padding-top: 96px;
+        padding-bottom: 96px; */
+        
     }
     .footer-logo{
         margin-bottom: 0;
