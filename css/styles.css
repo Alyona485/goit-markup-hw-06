@@ -385,7 +385,7 @@ h1,h2,h3,h4,h5,h6,p{
     background-image: linear-gradient(
         rgba(46,47,66,0.7),
         rgba(46,47,66,0.7)),
-        url(../images/Dark-bg1.jpg);
+        url(../images/Dark-bgM.jpg);
     background-repeat:no-repeat;
     background-position: center;
     background-size: cover;
@@ -401,7 +401,7 @@ h1,h2,h3,h4,h5,h6,p{
    .effective {
     background-image: linear-gradient(rgba(46, 47, 66, 0.7),
                 rgba(46, 47, 66, 0.7)),
-            url(../images/Dark-bg2.jpg);
+            url(../images/Dark-bgM@2x.jpg);
    } 
 }
 
@@ -460,10 +460,11 @@ h1,h2,h3,h4,h5,h6,p{
         max-width: 768px;
         background-image: linear-gradient(rgba(46, 47, 66, 0.7),
                     rgba(46, 47, 66, 0.7)),
-                url(../images/office-tablet@1x.jpg);
+                url(../images/Dark-bgP.jpg);
     .title {
             font-size: 56px;
             max-width: 496px;
+            margin-bottom: 36px;
         }
 
     }
@@ -475,7 +476,7 @@ h1,h2,h3,h4,h5,h6,p{
     .effective {
     background-image: linear-gradient(rgba(46, 47, 66, 0.7),
                 rgba(46, 47, 66, 0.7)),
-            url(../images/office-tablet@2x.jpg);
+            url(../images/Dark-bgP.jpg);
        /* .title {
         font-size: 56px;
         max-width: 496px;
@@ -492,7 +493,7 @@ h1,h2,h3,h4,h5,h6,p{
     max-width: 1140px;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7),
                 rgba(46, 47, 66, 0.7)),
-            url(../images/people-desk@1x.jpg);
+            url(../images/people-office1.jpg);
             /* height: 600px; */
 }
 
@@ -502,7 +503,9 @@ h1,h2,h3,h4,h5,h6,p{
 (min-rezolution: 2dppx),
 (min-rezolution: 192dpi) {
     .effective {
-        background-image: url(../images/people-desk@2x.jpg);
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)),
+                url(../images/people-office12@x.jpg);
     }
         .title {
             font-size: 56px;
@@ -571,7 +574,7 @@ h1,h2,h3,h4,h5,h6,p{
     margin-bottom: 8px;
     display: block;
     align-self: center;
-    text-align: left;
+    text-align: center;
 }
 
 .advantages-title-text {
@@ -885,6 +888,9 @@ h1,h2,h3,h4,h5,h6,p{
   .portfolio-bloc-text{
     width: 356px;
   }
+  .portfolio-title{
+    text-align: center;
+  }
 }
 @media screen and (min-width: 1158px){
  .portfolio{
@@ -947,7 +953,7 @@ h1,h2,h3,h4,h5,h6,p{
 .logo-studio-footer {
     color: #2e2f42;
     color: #f4f4fd;
-    
+   
 }
 
 .business-title-text{
@@ -1027,7 +1033,7 @@ h1,h2,h3,h4,h5,h6,p{
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #ffffff;
-    text-align: center;
+    text-align: left;
 }
 .footer-form{
     display: flex;
@@ -1091,11 +1097,12 @@ h1,h2,h3,h4,h5,h6,p{
         gap: 72px 24px;
         flex-wrap: wrap;
         flex-direction: row;
+        
     }
     .footer{
         /* padding-top: 96px;
         padding-bottom: 96px; */
-        
+       
     }
     .footer-logo{
         margin-bottom: 0;
