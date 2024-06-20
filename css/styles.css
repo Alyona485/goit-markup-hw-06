@@ -395,7 +395,7 @@ h1,h2,h3,h4,h5,h6,p{
     padding: 72px 0;
     margin: 0 auto;
 }
-@media screen and (-webkit-min-device-pixel-ratio: 2),
+ @media screen and (-webkit-min-device-pixel-ratio: 2),
 (min-rezolution: 2dppx),
  (min-rezolution: 192dpi) {
    .effective {
@@ -468,21 +468,23 @@ h1,h2,h3,h4,h5,h6,p{
         }
 
     }
+        @media screen and (-webkit-min-device-pixel-ratio: 2),
+        (min-rezolution: 2dppx),
+        (min-rezolution: 192dpi) {
+            .effective {
+                background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                        rgba(46, 47, 66, 0.7)),
+                    url(../images/Dark-bgP@2x.jpg);
+    
+                .title {
+                    font-size: 56px;
+                    max-width: 496px;
+                }
+            }
+        }
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 2),
-(min-rezolution: 2dppx),
-(min-rezolution: 192dpi) {
-    .effective {
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7),
-                rgba(46, 47, 66, 0.7)),
-            url(../images/Dark-bgP.jpg);
-       /* .title {
-        font-size: 56px;
-        max-width: 496px;
-       } */
-    }
-}
+
 
 @media screen and (min-width: 1158px) {
 .container {
@@ -496,23 +498,24 @@ h1,h2,h3,h4,h5,h6,p{
             url(../images/people-office1.jpg);
             /* height: 600px; */
 }
-
-}
-
 @media screen and (-webkit-min-device-pixel-ratio: 2),
 (min-rezolution: 2dppx),
 (min-rezolution: 192dpi) {
     .effective {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7),
                 rgba(46, 47, 66, 0.7)),
-                url(../images/people-office12@x.jpg);
+            url(../images/people-office12@x.jpg);
     }
-        .title {
-            font-size: 56px;
-            max-width: 496px;
-            
+
+    .title {
+        font-size: 56px;
+        max-width: 496px;
+
+    }
 }
 }
+
+
 /* ------advantages------ */
 
 .advantages {
@@ -705,6 +708,7 @@ h1,h2,h3,h4,h5,h6,p{
     flex-direction: column;
     gap: 72px;
     align-items: center;
+    justify-content: flex-start;
 }
 
 .team-our {
@@ -748,13 +752,18 @@ h1,h2,h3,h4,h5,h6,p{
 }
 
 @media screen and (min-width: 768px) {
-    .container {
-            width: 768;
-        }
+   
+    .container{
+    width: 786px;
+   }
+    .team-container{
+        width: 584px;
+    }
     .team-list{
         gap: 64px 24px;
         flex-direction: row;
         flex-wrap: wrap;
+        justify-content: center;
     }
     .team-our{
         width: calc((100% - 24px) / 2);
@@ -764,6 +773,13 @@ h1,h2,h3,h4,h5,h6,p{
         margin-right: 0;
     }
 }
+@media screen and (min-width: 768px) and (max-width: 1157px) {
+    .team-img {
+    width: 584px;
+    }
+   
+}
+
 @media screen and (min-width: 1158px) {
 .container {
         width: 1158px;
@@ -1092,12 +1108,12 @@ h1,h2,h3,h4,h5,h6,p{
     }
     .container-footer{
         width: 584px;
-        /* align-items: baseline; */
+        /* align-items: flex-start; */
         display: flex;
         gap: 72px 24px;
         flex-wrap: wrap;
         flex-direction: row;
-        
+        text-align: left;
     }
     .footer{
         /* padding-top: 96px;
@@ -1127,9 +1143,12 @@ h1,h2,h3,h4,h5,h6,p{
     }
     .footer-form{
         flex-direction: row;
+
+    }
+    .footer-submit-form{
+        align-items: flex-start;
     }
 }
-
 @media screen and (min-width: 1158px) {
     .footer{
         padding-top: 100px;
